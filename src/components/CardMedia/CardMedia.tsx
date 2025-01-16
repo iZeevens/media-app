@@ -30,9 +30,6 @@ function CardMedia({ results }: ICardMediaProps) {
               />
               <h4 className="mt-3 font-semibold text-lg">{result.trackName}</h4>
               <p className="text-sm text-gray-600">{result.artistName}</p>
-              <p className="text-sm text-gray-400 text-center">
-                {result.collectionName}
-              </p>
 
               <div className="mt-4 w-full text-left">
                 <p className="text-blue-500 font-medium">
