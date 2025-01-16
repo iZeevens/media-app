@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Media Search Web Application
 
-## Getting Started
+This is a simple web application that allows users to search for media content such as music, books, and other media using the [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html). The app provides a search bar for users to enter queries, and displays the search results in a list below the search bar.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search bar for querying music, books, and other media.
+- Display of search results with relevant media details.
+- Responsive design for mobile and desktop devices.
+- Clean, modern design with custom styling.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Next.js**
+- **NextUI**
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/iZeevens/media-app
+    ```
 
-## Deploy on Vercel
+2. **Install dependencies**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    If you're using npm:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    ```
+
+    Or if you're using yarn:
+
+    ```bash
+    yarn install
+    ```
+
+3. **Run the development server**:
+
+    For **Next.js**:
+
+    ```bash
+    npm run dev
+    ```
+
+    Or:
+
+    ```bash
+    yarn dev
+    ```
+
+    This will start the development server, and you can view the app at [http://localhost:3000](http://localhost:3000).
+
+## How to Use
+
+1. Once the app is running, open your browser and go to [http://localhost:3000](http://localhost:3000).
+2. Type a query (e.g., "Taylor") in the search barб and you can select media type, entity to refine the search results.
+3. View the list of search results displayed below the search bar. The results will include titles, images, and other relevant media details from the iTunes API.
+
+## Hosting
+
+[Click](https://media-app-liard.vercel.app/)
