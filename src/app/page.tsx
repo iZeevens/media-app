@@ -1,9 +1,20 @@
-'use client'
+"use client";
+import { useState } from "react";
+import { ITunesSearchResponse } from "@/types/types";
+import SearchSection from "@/components/SearchSection/SearchSection";
+import CardMedia from "@/components/CardMedia/CardMedia";
 
 export default function HomeMediaPage() {
+  const [results, setResults] = useState<ITunesSearchResponse[]>();
+
   return (
-    <div >
-      <h1>hello world</h1>
+    <div className="max-w-[1600px] mx-auto">
+      <header>
+        <SearchSection setResults={setResults} />
+      </header>
+      <main>
+        <CardMedia results={results} />
+      </main>
     </div>
   );
 }
