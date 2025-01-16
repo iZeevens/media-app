@@ -6,11 +6,11 @@ import SearchBar from "../SearchBar/SearchBar";
 import DropDown from "../DropDown/DropDown";
 
 interface ISearchSectionpProps {
-  setResults: React.Dispatch<React.SetStateAction<ITunesSearchResponse[] | undefined>>;
+  setResults: React.Dispatch<React.SetStateAction<ITunesSearchResponse[] | []>>;
 }
 
 function SearchSection({ setResults }: ISearchSectionpProps) {
-  const [term, setTerm] = useState<string>("");
+  const [term, setTerm] = useState<string>("Taylor");
   const [selectedMediaType, setSelectedMediaType] = useState<string>("all");
   const [entity, setEntity] = useState<string>("");
 
@@ -35,7 +35,7 @@ function SearchSection({ setResults }: ISearchSectionpProps) {
   }, [term, selectedMediaType, entity, setResults]);
 
   return (
-    <div className="flex justify-center items-center gap-5">
+    <div className="flex justify-center items-center gap-5 max-[390px]:flex-col">
       <SearchBar term={term} setTerm={setTerm} />
       <DropDown
         selectedMediaType={selectedMediaType}

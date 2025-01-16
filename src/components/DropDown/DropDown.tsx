@@ -42,7 +42,7 @@ function DropDown({
   setEntity,
 }: IDropDownProps) {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 max-[390px]:w-full max-[390px]:content-end">
       <Dropdown>
         <DropdownTrigger>
           <button className="w-26 px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200">
@@ -60,9 +60,9 @@ function DropDown({
           ))}
         </DropdownMenu>
       </Dropdown>
-      <Dropdown isDisabled={!mediaTypes}>
+      <Dropdown>
         <DropdownTrigger>
-          <button className="w-26 h-12 px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200">
+          <button className="min-w-[130px]  h-12 px-4 py-2 border rounded bg-gray-100 hover:bg-gray-200">
             {entity || "Select Entity"}
           </button>
         </DropdownTrigger>

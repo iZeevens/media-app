@@ -27,7 +27,9 @@ const fetchSearchResults = async (
       params,
     });
 
-    return data.results;
+    if (data && data.results) {
+      return data.results;
+    }
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;

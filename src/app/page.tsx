@@ -5,7 +5,7 @@ import SearchSection from "@/components/SearchSection/SearchSection";
 import CardMedia from "@/components/CardMedia/CardMedia";
 
 export default function HomeMediaPage() {
-  const [results, setResults] = useState<ITunesSearchResponse[]>();
+  const [results, setResults] = useState<ITunesSearchResponse[] | []>([]);
 
   return (
     <div className="max-w-[1600px] mx-auto p-5">
