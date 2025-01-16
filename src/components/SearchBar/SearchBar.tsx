@@ -14,6 +14,11 @@ function SearchBar({ term, setTerm }: ISearchBarProps) {
         startContent={<SeachIcon width={20} height={20} />}
         onChange={(e) => setTerm(e.target.value)}
         value={term}
+        validate={(value) => {
+          if (value.length < 2) {
+            return "Please enter at least 2 characters for the search";
+          }
+        }}
       />
     </div>
   );

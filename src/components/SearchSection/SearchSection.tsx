@@ -20,12 +20,12 @@ function SearchSection({ setResults }: ISearchSectionpProps) {
       mediaType: string,
       entity: string
     ) => {
-      if (!term) return;
+      if (!term || term.length < 2) return;
 
       try {
         const results = await fetchSearchResults(term, mediaType, entity);
+
         setResults(results);
-        console.log(results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -35,7 +35,7 @@ function SearchSection({ setResults }: ISearchSectionpProps) {
   }, [term, selectedMediaType, entity, setResults]);
 
   return (
-    <div className="flex justify-center gap-5">
+    <div className="flex justify-center items-center gap-5">
       <SearchBar term={term} setTerm={setTerm} />
       <DropDown
         selectedMediaType={selectedMediaType}

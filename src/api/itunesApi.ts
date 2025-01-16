@@ -26,6 +26,7 @@ const fetchSearchResults = async (
     const { data } = await axios.get("https://itunes.apple.com/search", {
       params,
     });
+
     return data.results;
   } catch (error) {
     console.error("Error fetching data:", error);
